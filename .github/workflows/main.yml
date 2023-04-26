@@ -1,0 +1,14 @@
+name: Ejecutar script
+
+on:
+  push:
+    branches: [ BROWSER.py ]
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Ejecutar script
+      run: |
+        python BROWSER.py
